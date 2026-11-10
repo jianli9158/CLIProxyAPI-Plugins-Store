@@ -2979,10 +2979,10 @@
     },
     {
       "id": "model-list-tweaker",
-      "name": "Model List Tweaker",
-      "description": "Reorder, rename display names, append remaining quota percentages, and hide models in the global model catalog across Claude Code, OpenAI, Codex, Gemini, and Grok clients, with a built-in web editor.",
+      "name": "Reorder/Rename Models",
+      "description": "Reorder, rename display names, and hide models in the global model catalog across Claude Code, Claude, OpenAI, Codex, Gemini, and Grok clients, with a built-in web editor. Set management_key in the plugin config. Made to work alongside Safeguard Killer (https://github.com/esauvisky/CLIProxyAPI-Safeguard-Killer-Plugin).",
       "author": "esauvisky",
-      "version": "0.3.5",
+      "version": "0.5.3",
       "repository": "https://github.com/esauvisky/CLIProxyAPI-Model-List-Tweaker-Plugin",
       "homepage": "https://github.com/esauvisky/CLIProxyAPI-Model-List-Tweaker-Plugin",
       "license": "MIT",
@@ -2996,7 +2996,7 @@
       "logo": "https://raw.githubusercontent.com/esauvisky/CLIProxyAPI-Model-List-Tweaker-Plugin/main/assets/logo.png",
       "locales": {
         "zh-CN": {
-          "description": "通过内置 Web 编辑器跨 Claude Code、OpenAI、Codex、Gemini 与 Grok 客户端对全局模型目录进行排序、修改显示名称、追加剩余配额百分比以及隐藏模型。"
+          "description": "通过内置 Web 编辑器跨 Claude Code、Claude、OpenAI、Codex、Gemini 与 Grok 客户端对全局模型目录进行重排序、重命名显示名称以及隐藏模型。请在插件配置中设置 management_key。推荐与 Safeguard Killer (https://github.com/esauvisky/CLIProxyAPI-Safeguard-Killer-Plugin) 搭配使用。"
         }
       }
     },
@@ -3247,7 +3247,7 @@
       "name": "AIStudio2API",
       "description": "Port of Mag1cFall/AIStudio2API as a native CLIProxyAPI plugin. Proxies Google AI Studio Playground & Build models (Gemini 3.8 Flash, Build, Veo, Imagen, TTS) via in-process SpiderMonkey BotGuard WAA VM.",
       "author": "jianli9158 (Upstream: Mag1cFall)",
-      "version": "1.1.4",
+      "version": "1.2.1",
       "repository": "https://github.com/jianli9158/cpa-plugin-aistudio2api",
       "homepage": "https://github.com/jianli9158/cpa-plugin-aistudio2api",
       "license": "MIT",
@@ -3265,11 +3265,159 @@
       }
     },
     {
+      "id": "prompt-admin",
+      "name": "Prompt Admin",
+      "description": "Per-model system prompts with Git prompt-repo auto-matching and a Management Center page.",
+      "author": "Tx13758627780",
+      "version": "0.1.3",
+      "repository": "https://github.com/Tx13758627780/cpa-plugin-prompt-admin",
+      "homepage": "https://github.com/Tx13758627780/cpa-plugin-prompt-admin",
+      "license": "MIT",
+      "tags": [
+        "Interceptor",
+        "Prompt",
+        "Management"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "按模型注入系统提示词，自动匹配 Git 提示词仓库，并在管理中心提供管理页面。"
+        }
+      }
+    },
+    {
+      "id": "ustc",
+      "name": "USTC Token Plan",
+      "description": "Adds USTC TokenWorks models through university SSO or API keys, automatic iWAN networking, web settings, and CLIProxyAPI's native multi-account pool. Community plugin, not an official university client.",
+      "author": "njzjz",
+      "repository": "https://github.com/njzjz/cpa-ustc",
+      "homepage": "https://github.com/njzjz/cpa-ustc",
+      "tags": [
+        "Provider",
+        "Auth",
+        "Management"
+      ],
+      "locales": {
+        "zh-CN": {
+          "name": "中科大词元计划",
+          "description": "通过科大统一认证或 API Key 使用词元工坊模型，支持自动 iWAN、网页设置及 CPA 原生多账号号池。社区插件，非学校官方客户端。"
+        }
+      }
+    },
+    {
+      "id": "llm-tracing",
+      "name": "LLM Tracing",
+      "description": "Exports every proxied request as an OpenTelemetry trace (OTLP/HTTP JSON) with one child span per upstream attempt, so retries and fallbacks are visible. Records models, providers, tokens, latency, TTFT and errors with client keys hashed and secrets redacted. Works with Langfuse, Jaeger, Grafana Tempo, Datadog, Honeycomb and any OTLP backend.",
+      "author": "abdulmoiz65",
+      "repository": "https://github.com/abdulmoiz65/LLM-Tracing-Plugin",
+      "logo": "https://raw.githubusercontent.com/abdulmoiz65/LLM-Tracing-Plugin/main/assets/logo.png",
+      "homepage": "https://github.com/abdulmoiz65/LLM-Tracing-Plugin",
+      "license": "MIT",
+      "tags": [
+        "Observability",
+        "Tracing",
+        "Usage",
+        "Monitoring"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "将所有代理的请求导出为 OpenTelemetry 追踪（OTLP/HTTP JSON），每个上游重试与凭据回退均记录为独立的子 Span。完整记录模型、提供商、Token 消耗、延迟、首字时间（TTFT）及错误信息，同时对客户端密钥进行哈希处理并脱敏敏感凭据。兼容 Langfuse、Jaeger、Grafana Tempo、Datadog、Honeycomb 等任意 OTLP 后端。"
+        }
+      }
+    },
+    {
+      "id": "abliteration",
+      "name": "Abliteration.ai",
+      "description": "Adds the Abliteration.ai gateway (api.abliteration.ai) as an API-key provider with interactive login, live model catalog discovery from GET /v1/models, and OpenAI Chat Completions execution.",
+      "author": "esauvisky",
+      "version": "0.1.4",
+      "repository": "https://github.com/esauvisky/CLIProxyAPI-Abliteration-Plugin",
+      "homepage": "https://github.com/esauvisky/CLIProxyAPI-Abliteration-Plugin",
+      "license": "MIT",
+      "tags": [
+        "Provider",
+        "OAuth",
+        "Executor",
+        "Management"
+      ],
+      "logo": "https://raw.githubusercontent.com/esauvisky/CLIProxyAPI-Abliteration-Plugin/main/assets/logo.png",
+      "locales": {
+        "zh-CN": {
+          "description": "添加 Abliteration.ai 网关（api.abliteration.ai）作为 API Key 凭据提供商，支持交互式登录、基于 GET /v1/models 的实时模型目录发现以及 OpenAI Chat Completions 执行。"
+        }
+      }
+    },
+    {
+      "id": "experiential-labs",
+      "name": "Experiential Labs",
+      "description": "Adds the Experiential Labs gateway (api.experientiallabs.ai) as an API-key provider with interactive login, live model catalog discovery, multi-protocol routing (Chat Completions, Responses, Anthropic Messages), and credit balance quota reporting.",
+      "author": "esauvisky",
+      "version": "0.1.4",
+      "repository": "https://github.com/esauvisky/CLIProxyAPI-Experiential-Labs-Plugin",
+      "homepage": "https://github.com/esauvisky/CLIProxyAPI-Experiential-Labs-Plugin",
+      "license": "MIT",
+      "tags": [
+        "Provider",
+        "OAuth",
+        "Executor",
+        "Quota",
+        "Management"
+      ],
+      "logo": "https://raw.githubusercontent.com/esauvisky/CLIProxyAPI-Experiential-Labs-Plugin/main/assets/logo.png",
+      "locales": {
+        "zh-CN": {
+          "description": "添加 Experiential Labs 网关（api.experientiallabs.ai）作为 API Key 凭据提供商，支持交互式登录、实时模型目录发现、多协议路由（Chat Completions、Responses、Anthropic Messages）以及额度余额配额查询。"
+        }
+      }
+    },
+    {
+      "id": "safeguard-killer",
+      "name": "Safeguard Killer",
+      "description": "Neutralizes model safeguards, refusal taint, and auto-mode classifiers across Claude Code, Claude models, OpenAI/Codex models, and Gemini models, and routes Smart Groups that automatically fail over around refusals with 5m cache stickiness and quota balancing. Set management_key in the plugin config. Made to work alongside Reorder/Rename Models (https://github.com/esauvisky/CLIProxyAPI-Model-List-Tweaker-Plugin).",
+      "author": "esauvisky",
+      "version": "0.5.7",
+      "repository": "https://github.com/esauvisky/CLIProxyAPI-Safeguard-Killer-Plugin",
+      "homepage": "https://github.com/esauvisky/CLIProxyAPI-Safeguard-Killer-Plugin",
+      "license": "MIT",
+      "tags": [
+        "Scheduler",
+        "Router",
+        "Executor",
+        "Quota",
+        "Management"
+      ],
+      "logo": "https://raw.githubusercontent.com/esauvisky/CLIProxyAPI-Safeguard-Killer-Plugin/main/assets/logo.png",
+      "locales": {
+        "zh-CN": {
+          "description": "消除跨 Claude Code、Claude 系列模型、OpenAI/Codex 系列模型以及 Gemini 系列模型的安全拦截、拒绝标记（Refusal Taint）与自动模式分类器，并通过智能分组（Smart Groups）提供具备 5 分钟缓存粘性与配额均衡的拒绝自动故障转移路由。请在插件配置中设置 management_key。推荐与 Reorder/Rename Models (https://github.com/esauvisky/CLIProxyAPI-Model-List-Tweaker-Plugin) 搭配使用。"
+        }
+      }
+    },
+    {
+      "id": "model-meta-sync",
+      "name": "Model Meta Sync",
+      "description": "Fills per-provider model metadata (display name, context length, input/output modalities, thinking levels) from each OpenAI-compatible gateway's own /v1/models into the CLIProxyAPI provider config, with a dry-run preview and a per-provider report.",
+      "author": "LIEGU0317",
+      "version": "0.3.1",
+      "repository": "https://github.com/LIEGU0317/cpa-plugin-model-meta-sync",
+      "homepage": "https://github.com/LIEGU0317/cpa-plugin-model-meta-sync",
+      "license": "MIT",
+      "tags": [
+        "Management",
+        "Models"
+      ],
+      "logo": "https://raw.githubusercontent.com/LIEGU0317/cpa-plugin-model-meta-sync/main/assets/logo.png",
+      "locales": {
+        "zh-CN": {
+          "description": "把每个 OpenAI 兼容网关自己 /v1/models 返回的模型参数（显示名、上下文长度、输入/输出模态、思考档位）同步写回 CPA 供应商配置，支持 dry-run 预览和按供应商的运行报告。"
+        }
+      }
+    },
+    {
       "id": "gemini-web2api",
       "name": "Gemini-Web2API",
-      "description": "Port of Mag1cFall/Gemini-Web2API as a native CLIProxyAPI plugin. Proxies Google Gemini Web (gemini.google.com) into OpenAI Chat/Completions/Responses, Anthropic Claude Messages, Google Gemini v1beta, Imagen, Veo, TTS/STT, and Gemini Live WebSocket endpoints with Chrome TLS fingerprinting and automatic cookie rotation.",
+      "description": "Port of Mag1cFall/Gemini-Web2API as a native CLIProxyAPI plugin. Proxies Google Gemini Web (Gemini 3.0 Pro/Flash/Thinking, Image, Video, Music, Deep Research, Canvas, TTS/STT) via Chrome 131 TLS/HTTP2 fingerprint emulation, automatic Cookie rotation, and keyless Guest sessions into OpenAI Chat, Responses, Claude Messages, and Gemini Native protocols.",
       "author": "jianli9158 (Upstream: Mag1cFall)",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "repository": "https://github.com/jianli9158/cpa-plugin-gemini-web2api",
       "homepage": "https://github.com/jianli9158/cpa-plugin-gemini-web2api",
       "license": "MIT",
@@ -3282,7 +3430,242 @@
       ],
       "locales": {
         "zh-CN": {
-          "description": "Mag1cFall/Gemini-Web2API 的 CLIProxyAPI 原生插件移植版。通过 Chrome TLS 指纹仿真与 Cookie 自动轮换，将 Google Gemini 网页版（gemini.google.com）反代为 OpenAI Chat/Completions/Responses、Anthropic Claude Messages、Google Gemini v1beta、图像/视频生成、语音合成与转写等兼容接口。"
+          "description": "Mag1cFall/Gemini-Web2API 的 CLIProxyAPI 原生插件移植版。通过 Chrome 131 TLS/HTTP2 指纹伪装、后台 Cookie 自动轮换与免登录访客会话，将 Google Gemini 网页版（Gemini 3.0 Pro/Flash/Thinking、绘图、视频、音乐、深度研究、Canvas、语音等）反代为 OpenAI Chat、Responses、Claude Messages 与 Gemini Native 多协议兼容接口。"
+        }
+      }
+    },
+    {
+      "id": "relaywarden",
+      "name": "RelayWarden",
+      "description": "Compresses tool output before it reaches the upstream, records relay degradation signals such as model substitution and stripped reasoning, and picks the fastest healthy auth with session affinity. Every feature has its own switch and a built-in management UI.",
+      "author": "Kyresn",
+      "repository": "https://github.com/Kyresn/relaywarden",
+      "homepage": "https://github.com/Kyresn/relaywarden",
+      "license": "MIT",
+      "tags": [
+        "Interceptor",
+        "Scheduler",
+        "Management",
+        "Dashboard",
+        "Statistics",
+        "Routing",
+        "Codex",
+        "Responses"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "在请求发往上游前压缩工具输出，记录中转降智信号（模型替换、推理被剥离、缓存失效等），并按延迟与会话亲和选择最健康的上游凭证。所有功能均可独立开关，内置管理界面。"
+        }
+      }
+    },
+    {
+      "id": "cpa-pools-and-aliases",
+      "name": "Pools and Aliases",
+      "description": "Pool every subscription and API key that serves the same model under its plain model id: new accounts join automatically, model lists drop provider suffixes, optional 'pools only' view. Uses CPA's native aliases; routing stays untouched.",
+      "author": "ngvoicu",
+      "repository": "https://github.com/ngvoicu/cpa-pools-and-aliases",
+      "logo": "https://raw.githubusercontent.com/ngvoicu/cpa-pools-and-aliases/main/assets/logo.svg",
+      "homepage": "https://github.com/ngvoicu/cpa-pools-and-aliases",
+      "license": "MIT",
+      "tags": [
+        "Management",
+        "Model Alias",
+        "Pool",
+        "Dashboard"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "将提供同一模型的所有订阅与 API Key 合并到以模型原生 ID 命名的池中：新账号自动加入，模型列表去掉提供商后缀，可选“仅显示池”视图。使用 CPA 原生别名，不改变路由。"
+        }
+      }
+    },
+    {
+      "id": "opencode-cpa-plus",
+      "name": "OpenCode Plus",
+      "description": "OpenCode Go provider for CLIProxyAPI and CPA Manager Plus. Every API key becomes a CPA credential that is created, restored and removed together with the key list, with per-credential quota. Stable session IDs per conversation, optional model whitelist, and a Chinese/English settings page under plugin pages. Unofficial; tested only on the OpenCode Go plan.",
+      "author": "sodiseng",
+      "repository": "https://github.com/sodiseng/opencode-cpa-plus",
+      "logo": "https://opencode.ai/favicon.svg",
+      "homepage": "https://github.com/sodiseng/opencode-cpa-plus",
+      "license": "MIT",
+      "tags": [
+        "Provider",
+        "OpenCode",
+        "Quota",
+        "Management"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "面向 CLIProxyAPI 与 CPA Manager Plus 的 OpenCode Go Provider。每个 API Key 对应一个 CPA 凭证，随 Key 列表自动创建、恢复和删除，并按凭证显示额度。同一对话的会话 ID 保持稳定，支持模型白名单，插件页面中提供中英文设置页。非官方插件，仅在 OpenCode Go 套餐测试。"
+        }
+      }
+    },
+    {
+      "id": "cpa-mistral-normalizer",
+      "name": "Mistral Reasoning Normalizer",
+      "description": "Makes Mistral reasoning output OpenAI-shaped: flattens the content chunk list (thinking + text) into content plus a reasoning_content string, streaming and non-streaming, so Responses, Claude and Gemini clients get clean text.",
+      "author": "batuhan4",
+      "repository": "https://github.com/Batuhan4/cpa-mistral-normalizer",
+      "homepage": "https://github.com/Batuhan4/cpa-mistral-normalizer",
+      "license": "MIT",
+      "tags": [
+        "Response Normalizer",
+        "Mistral",
+        "Reasoning",
+        "OpenAI Compatibility"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "让 Mistral 的推理输出符合 OpenAI 格式：将 content 分块列表（thinking + text）展平为 content 字符串和 reasoning_content 字符串，支持流式与非流式，使 Responses、Claude 和 Gemini 客户端获得干净的文本。"
+        }
+      }
+    },
+    {
+      "id": "cpa-opencode-go",
+      "name": "OpenCode Go",
+      "description": "Adds OpenCode Go as a single CLIProxyAPI provider with dynamic model discovery and a shared API-key pool. Selects native protocols or translates between OpenAI Chat Completions, OpenAI Responses, Anthropic Messages, and Gemini GenerateContent, with streaming and reasoning support. Uses CLIProxyAPI for key rotation, retries, cooldowns, and rolling, weekly, and monthly quota queries.",
+      "author": "dillonzq",
+      "repository": "https://github.com/dillonzq/cpa-opencode-go",
+      "logo": "https://raw.githubusercontent.com/dillonzq/cpa-opencode-go/main/assets/logo.png",
+      "homepage": "https://github.com/dillonzq/cpa-opencode-go",
+      "license": "MIT",
+      "tags": [
+        "Provider",
+        "OpenCode Go",
+        "Protocol Translation",
+        "Quota"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "将 OpenCode Go 作为单一 CLIProxyAPI 服务商接入，支持动态模型发现和共享 API 密钥池。按需选择原生协议，或在 OpenAI Chat Completions、OpenAI Responses、Anthropic Messages 与 Gemini GenerateContent 之间转换，支持流式响应和推理。借助 CLIProxyAPI 完成密钥轮换、重试与冷却，并支持滚动、每周和每月额度查询。"
+        }
+      }
+    },
+    {
+      "id": "cpa-opencode",
+      "name": "OpenCode",
+      "description": "Adds OpenCode pay-as-you-go as a single CLIProxyAPI provider with dynamic model discovery and a shared API-key pool. Supports OpenAI Chat Completions, OpenAI Responses, Anthropic Messages, and Gemini GenerateContent, with native routing, protocol conversion, streaming, and reasoning. Uses CLIProxyAPI for key rotation, retries, and cooldowns, with member budget, balance, and available-credit queries.",
+      "author": "dillonzq",
+      "repository": "https://github.com/dillonzq/cpa-opencode",
+      "logo": "https://raw.githubusercontent.com/dillonzq/cpa-opencode/main/assets/logo.png",
+      "homepage": "https://github.com/dillonzq/cpa-opencode",
+      "license": "MIT",
+      "tags": [
+        "Provider",
+        "OpenCode",
+        "Protocol Translation",
+        "Quota"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "将 OpenCode 按量付费作为单一 CLIProxyAPI 服务商接入，支持动态模型发现和共享 API 密钥池。支持 OpenAI Chat Completions、OpenAI Responses、Anthropic Messages 与 Gemini GenerateContent，提供原生路由、协议转换、流式响应和推理。借助 CLIProxyAPI 完成密钥轮换、重试与冷却，并支持成员预算、余额和可用额度查询。"
+        }
+      }
+    },
+    {
+      "id": "cpa-minimax",
+      "name": "MiniMax",
+      "description": "Adds MiniMax subscription and pay-as-you-go APIs as a single CLIProxyAPI provider with international and China mainland credentials in one pool. Supports OpenAI Chat Completions, OpenAI Responses, Anthropic Messages, and Gemini GenerateContent, with streaming and thinking controls. Uses CLIProxyAPI for subscription-first scheduling, key rotation, retries, and cooldowns, with rolling and weekly subscription quota queries.",
+      "author": "dillonzq",
+      "repository": "https://github.com/dillonzq/cpa-minimax",
+      "logo": "https://raw.githubusercontent.com/dillonzq/cpa-minimax/main/assets/logo.png",
+      "homepage": "https://github.com/dillonzq/cpa-minimax",
+      "license": "MIT",
+      "tags": [
+        "Provider",
+        "MiniMax",
+        "Protocol Translation",
+        "Quota"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "将 MiniMax 订阅与按量付费 API 作为单一 CLIProxyAPI 服务商接入，国际站与中国大陆凭证共用一个池。支持 OpenAI Chat Completions、OpenAI Responses、Anthropic Messages 与 Gemini GenerateContent，提供流式响应和思考控制。借助 CLIProxyAPI 实现订阅优先调度、密钥轮换、重试与冷却，并支持滚动和每周订阅额度查询。"
+        }
+      }
+    },
+    {
+      "id": "cpa-deepseek",
+      "name": "DeepSeek",
+      "description": "Adds the official DeepSeek API as a single CLIProxyAPI provider with dynamic model discovery and a shared API-key pool. Supports native OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages, plus Gemini GenerateContent conversion, with streaming, tools, and reasoning. Uses CLIProxyAPI for key rotation, retries, and cooldowns, with selected-credential account balance queries and separate CNY/USD summaries.",
+      "author": "dillonzq",
+      "repository": "https://github.com/dillonzq/cpa-deepseek",
+      "logo": "https://raw.githubusercontent.com/dillonzq/cpa-deepseek/main/assets/logo.png",
+      "homepage": "https://github.com/dillonzq/cpa-deepseek",
+      "license": "MIT",
+      "tags": [
+        "Provider",
+        "DeepSeek",
+        "Protocol Translation",
+        "Quota"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "将 DeepSeek 官方 API 作为单一 CLIProxyAPI 服务商接入，支持动态模型发现和共享 API 密钥池。原生支持 OpenAI Chat Completions、OpenAI Responses 与 Anthropic Messages，并可转换 Gemini GenerateContent，支持流式响应、工具调用和推理。借助 CLIProxyAPI 完成密钥轮换、重试与冷却，可查询所选凭证的账户余额，并分别汇总人民币和美元余额。"
+        }
+      }
+    },
+    {
+      "id": "cpa-codex-reset-manager",
+      "name": "Codex Quota Steward",
+      "description": "Tracks quota history and forecasts, preserves Codex reset policies, and sends server-side email/webhook alerts with per-recipient delivery records.",
+      "author": "Autsunset",
+      "repository": "https://github.com/Autsunset/cpa-codex-reset-manager",
+      "homepage": "https://github.com/Autsunset/cpa-codex-reset-manager",
+      "license": "MIT",
+      "tags": [
+        "Management",
+        "Codex",
+        "Quota",
+        "Dashboard",
+        "Notifications"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "展示额度曲线与耗尽预测，持久保存 Codex 重置策略，支持一个发件邮箱向多位收件人发送独立提醒，以及服务端 Webhook 通知。",
+          "name": "Codex 额度管家"
+        }
+      },
+      "logo": "https://raw.githubusercontent.com/Autsunset/cpa-codex-reset-manager/main/logo.png"
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral",
+      "description": "Connects the Mistral API to CLIProxyAPI for OpenAI Chat Completions, Responses, Claude, and Gemini clients. Manages multiple API keys with priority, failover, and cooldown backoff, plus upstream model discovery, model tests, reasoning controls, and request statistics.",
+      "author": "kaecho",
+      "version": "0.4.3",
+      "repository": "https://github.com/kaecho/mistral",
+      "logo": "https://avatars.githubusercontent.com/u/315656146?s=64&v=4",
+      "homepage": "https://github.com/kaecho/mistral",
+      "license": "MIT",
+      "tags": [
+        "Provider",
+        "Mistral",
+        "Failover",
+        "Reasoning"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "把 Mistral API 接入 CLIProxyAPI，支持 OpenAI Chat Completions、Responses、Claude 和 Gemini 客户端。提供多凭据优先级与失败切换、冷却退避、上游模型发现、模型测试、思考档位覆盖和请求统计。"
+        }
+      }
+    },
+    {
+      "id": "claude-cache-keepalive",
+      "name": "CPA Cache Keep",
+      "description": "Keeps selected Claude conversation prompt caches warm through scheduled 1-token replays, with persistent sessions and an embedded light/dark management UI.",
+      "author": "YHonc (based on Banben07)",
+      "repository": "https://github.com/YHonc/cpa-cache-keep",
+      "homepage": "https://github.com/YHonc/cpa-cache-keep",
+      "license": "MIT",
+      "tags": [
+        "Management",
+        "Interceptor",
+        "Claude",
+        "Cache"
+      ],
+      "locales": {
+        "zh-CN": {
+          "description": "按对话选择并定时重放最小生成请求，为 Claude prompt cache 续期；支持新请求自动顺延、会话持久化和内嵌明暗主题管理界面。"
         }
       }
     }
